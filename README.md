@@ -1,1 +1,4 @@
-# zmk-sofle-v2
+# ZMK Sofle Keymap
+
+<img src="keymap-drawer/sofle.svg" >
+
