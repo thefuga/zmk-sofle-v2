@@ -217,7 +217,6 @@ svg.keymap {
   font-size: 12px;
   font-weight: bold;
   text-rendering: optimizeLegibility;
-  background-color: #1e1e1e; /* Dark background */
 }
 
 /* Key background */
