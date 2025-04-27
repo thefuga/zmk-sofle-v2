@@ -17,18 +17,41 @@ draw_config:
   append_colon_to_layer_header: true
   small_pad: 2.0
   svg_extra_style: |
-    /* For default sytles, see https://github.com/caksoylar/keymap-drawer/blob/main/keymap_drawer/config.py#L85 */
+    /* For default styles, see https://github.com/caksoylar/keymap-drawer/blob/main/keymap_drawer/config.py#L85 */
 
     svg.keymap {
       font-family: Ubuntu Mono, Inconsolata, Consolas, Liberation Mono, Menlo, monospace;
       font-size: 12px;
       font-weight: bold;
       text-rendering: optimizeLegibility;
+      background-color: #1e1e1e; /* Dark background */
+    }
+
+    /* Key background */
+    rect.key {
+      fill: #2c2c2c; /* Darker key background */
+      stroke: #555;  /* Key border */
+    }
+
+    /* Key text */
+    text {
+      fill: #e0e0e0; /* Light text color */
     }
 
     /* Color accent for held keys */
     rect.held, rect.combo.held {
-        fill: #ffc;
+      fill: #3c5d99; /* Soft dark blue for held keys */
+    }
+
+    /* Combo background */
+    rect.combo {
+      fill: #3a3a3a; /* Slightly lighter than keys for combos */
+      stroke: #666;
+    }
+
+    /* Combo text */
+    .combo text {
+      fill: #e0e0e0;
     }
 
     /* Technique borrowed and extended from https://github.com/englmaxi/zmk-config/blob/master/keymap-drawer/config.yaml */
