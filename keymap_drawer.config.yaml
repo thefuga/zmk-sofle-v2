@@ -17,44 +17,43 @@ draw_config:
   append_colon_to_layer_header: true
   small_pad: 2.0
   svg_extra_style: |
-    /* For default styles, see https://github.com/caksoylar/keymap-drawer/blob/main/keymap_drawer/config.py#L85 */
-
     svg.keymap {
       font-family: Ubuntu Mono, Inconsolata, Consolas, Liberation Mono, Menlo, monospace;
       font-size: 12px;
       font-weight: bold;
       text-rendering: optimizeLegibility;
+      /* No background-color! Let it inherit */
     }
 
     /* Key background */
     rect.key {
-      fill: #2c2c2c; /* Darker key background */
-      stroke: #555;  /* Key border */
+      fill: #2c2c2c;
+      stroke: #555;
     }
 
-    /* Default text color for EVERYTHING */
+    /* FORCING ALL visible elements to be light iron color */
     text, 
+    path, 
     .combo text, 
     .sym_sub_text, 
     .tap_dance, 
     .toggle, 
     .sym_by_sym, 
     .combo.sym_by_sym {
-      fill: #d2d6da; /* Consistent light gray text color */
+      fill: #d2d6da;
     }
 
     /* Color accent for held keys */
     rect.held, rect.combo.held {
-      fill: #3c5d99; /* Soft dark blue for held keys */
+      fill: #3c5d99;
     }
 
     /* Combo background */
     rect.combo {
-      fill: #3a3a3a; /* Slightly lighter than keys for combos */
+      fill: #3a3a3a;
       stroke: #666;
     }
 
-    /* Specific sym subtext and toggle translations (unchanged) */
     .sym_sub_text.tap {
       translate: -5px 2px;
       font-size: 20px;
@@ -111,7 +110,6 @@ draw_config:
       visibility: hidden;
     }
 
-    /* hide hold box for combo sym_by_sym */
     .combo.sym_by_sym.hold > path[stroke="none"][fill="none"] {
       visibility: hidden;
     }
