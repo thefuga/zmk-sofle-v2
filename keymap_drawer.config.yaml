@@ -33,9 +33,15 @@ draw_config:
       stroke: #555;  /* Key border */
     }
 
-    /* Key text */
-    text {
-      fill: #e0e0e0; /* Light text color */
+    /* Default text color for EVERYTHING */
+    text, 
+    .combo text, 
+    .sym_sub_text, 
+    .tap_dance, 
+    .toggle, 
+    .sym_by_sym, 
+    .combo.sym_by_sym {
+      fill: #d2d6da; /* Consistent light gray text color */
     }
 
     /* Color accent for held keys */
@@ -49,12 +55,7 @@ draw_config:
       stroke: #666;
     }
 
-    /* Combo text */
-    .combo text {
-      fill: #e0e0e0;
-    }
-
-    /* Technique borrowed and extended from https://github.com/englmaxi/zmk-config/blob/master/keymap-drawer/config.yaml */
+    /* Specific sym subtext and toggle translations (unchanged) */
     .sym_sub_text.tap {
       translate: -5px 2px;
       font-size: 20px;
@@ -73,7 +74,6 @@ draw_config:
       opacity: 1.0;
     }
 
-    /* Toggle */
     .toggle.shifted {
       translate: -10px 12px;
     }
@@ -82,7 +82,6 @@ draw_config:
       translate: 13px -23px;
     }
 
-    /* Variant for tap-dances */
     .tap_dance.tap {
       translate: -7px 0px;
       font-size: 12px;
@@ -93,7 +92,6 @@ draw_config:
       opacity: 1.0;
     }
 
-    /* Variant for symbol next to symbol */
     .sym_by_sym.tap {
       translate: -6px 0px;
     }
