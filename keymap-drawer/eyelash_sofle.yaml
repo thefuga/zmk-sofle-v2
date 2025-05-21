@@ -14,7 +14,7 @@ layers:
   - {t: '9', s: (}
   - {t: '0', s: )}
   - {t: '-', s: _}
-  - {t: '$$mdi:keyboard-esc$$', h: '$$mdi:keyboard-tab$$'}
+  - $$mdi:keyboard-tab$$
   - Q
   - W
   - E
